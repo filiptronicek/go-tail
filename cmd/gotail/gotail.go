@@ -7,9 +7,9 @@ package main
 import (
 	"flag"
 	"fmt"
-    "io"
+	"github.com/filiptronicek/tail"
+	"io"
 	"os"
-	"github.com/nxadm/tail"
 )
 
 func args2config() (tail.Config, int64) {
@@ -25,6 +25,7 @@ func args2config() (tail.Config, int64) {
 	if config.ReOpen {
 		config.Follow = true
 	}
+	config.CompleteLines = false
 	config.MaxLineSize = maxlinesize
 	return config, n
 }

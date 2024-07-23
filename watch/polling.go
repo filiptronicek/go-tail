@@ -9,7 +9,7 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/nxadm/tail/util"
+	"github.com/filiptronicek/tail/util"
 	"gopkg.in/tomb.v1"
 )
 
